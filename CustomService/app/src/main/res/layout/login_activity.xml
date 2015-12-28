@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/contentBgColor">
+
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@mipmap/login_logo" />
+
+    <EditText
+        android:id="@+id/username_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_logo"
+        android:text="kscs@kingsoft.com"
+        android:textColor="@color/black_aa"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:hint="@string/username"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/password_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username_edit"
+        android:text="Kingsoft123"
+        android:textColor="@color/black_aa"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:hint="@string/password"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/newer_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_edit"
+        android:layout_marginLeft="20dp"
+        android:padding="10dp"
+        android:text="@string/remember_password"
+        android:visibility="gone"
+        android:textColor="#bcb9b4" />
+
+
+    <Button
+        android:id="@+id/login_bt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/newer_register"
+        android:layout_margin="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/login_bg_selector"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textSize="18sp"
+        android:textColor="@color/white" />
+    <ImageView
+        android:id="@+id/splash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/splash"
+        android:clickable="true"
+        />
+    <include
+        android:id="@+id/login_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/login_progress_layout"
+        android:clickable="true"
+        android:visibility="gone" />
+</RelativeLayout>
